@@ -3,26 +3,26 @@ from time import *
 from tkinter import *
 
 
-# параметры графики 
+
 window = Tk()
-window.title("шифратор fernet ")
+window.title(" fernet ")
 window.geometry('600x400')
 
-# функция для кнопки назад        
+     
 def back ():
     print(1)
     for i in widgets:
         i.forget()
     f1.pack()
 
-# функция для кнопки очистки
+
 def clear():
     print(1)
     global result
     result.destroy()
     result = Text(window, bg = '#141414', fg = 'White')    
     
-#функции для шифрования   
+   
 def encrypt ():
     b_back.pack()
     f1.forget()
@@ -40,8 +40,7 @@ def encrypt_costyl() :
     result.pack()
     b_clear.pack()
     
-    
-# и дешифрования         
+          
 def decrypt():
     b_back.pack()
     f1.forget()
@@ -64,7 +63,7 @@ def decrypt_costyl():
     b_clear.pack()
 print(1)
 
-#кнопочки и настройки графики 
+ 
 costyl = Button(window, command= encrypt_costyl, text = 'зашифровать')
 costyl2 = Button(window, command= decrypt_costyl, text = 'расшифровать')
 gl = Label(window , text = 'введите текст' )    
